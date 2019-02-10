@@ -5,6 +5,20 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentsControl.Gateways.RestApi", "DocumentsControl.Gateways.RestApi\DocumentsControl.Gateways.RestApi.csproj", "{97D29679-5FE7-40B4-97AB-F86ECE4271B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{456B4E80-CE67-4671-8CDF-59B76F9C6F3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{40E255BC-BE34-4935-98DA-02D05AF2576B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F039A511-3FCB-49D0-A86A-40E0D6639291}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ResApi", "ResApi", "{812343E0-6AC4-49C0-BC9E-10A78A7ADD79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentsControl.Domain", "DocumentsControl.Domain\DocumentsControl.Domain.csproj", "{1590E508-0820-460B-A222-F7878DDD28CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentsControl.DataAccess.EfCore", "DocumentsControl.DataAccess.EfCore\DocumentsControl.DataAccess.EfCore.csproj", "{1DD51F65-5866-4635-820A-3E38D7C37FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumnetsControl.Config", "DocumnetControl.Config\DocumnetsControl.Config.csproj", "{C7D89CD0-1634-4CC6-8A2D-1EBBDC077576}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +29,27 @@ Global
 		{97D29679-5FE7-40B4-97AB-F86ECE4271B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97D29679-5FE7-40B4-97AB-F86ECE4271B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97D29679-5FE7-40B4-97AB-F86ECE4271B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1590E508-0820-460B-A222-F7878DDD28CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1590E508-0820-460B-A222-F7878DDD28CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1590E508-0820-460B-A222-F7878DDD28CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1590E508-0820-460B-A222-F7878DDD28CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD51F65-5866-4635-820A-3E38D7C37FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD51F65-5866-4635-820A-3E38D7C37FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD51F65-5866-4635-820A-3E38D7C37FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD51F65-5866-4635-820A-3E38D7C37FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D89CD0-1634-4CC6-8A2D-1EBBDC077576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D89CD0-1634-4CC6-8A2D-1EBBDC077576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D89CD0-1634-4CC6-8A2D-1EBBDC077576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D89CD0-1634-4CC6-8A2D-1EBBDC077576}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97D29679-5FE7-40B4-97AB-F86ECE4271B6} = {812343E0-6AC4-49C0-BC9E-10A78A7ADD79}
+		{1590E508-0820-460B-A222-F7878DDD28CA} = {40E255BC-BE34-4935-98DA-02D05AF2576B}
+		{1DD51F65-5866-4635-820A-3E38D7C37FCE} = {F039A511-3FCB-49D0-A86A-40E0D6639291}
+		{C7D89CD0-1634-4CC6-8A2D-1EBBDC077576} = {F039A511-3FCB-49D0-A86A-40E0D6639291}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC492D6B-C95F-4FD8-A6BD-A8402B02ED38}

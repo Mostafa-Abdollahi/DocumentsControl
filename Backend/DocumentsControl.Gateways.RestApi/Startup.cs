@@ -15,6 +15,8 @@ namespace DocumentsControl.Gateways.RestApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -25,10 +27,15 @@ namespace DocumentsControl.Gateways.RestApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
+            app.UseCors(builder =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                //TODO: don't try this at home
+                builder.AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowAnyOrigin();
             });
+
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
