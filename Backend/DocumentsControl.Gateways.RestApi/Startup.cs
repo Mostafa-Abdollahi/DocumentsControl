@@ -29,10 +29,14 @@ namespace DocumentsControl.Gateways.RestApi
 
             app.UseCors(builder =>
             {
+<<<<<<< HEAD
                 //TODO: don't try this at home
                 builder.AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowAnyOrigin();
+=======
+                await context.Response.WriteAsync("kose ammat!");
+>>>>>>> 3186e0bbd6ab2f71e13d337b6136a5f5537404dc
             });
 
             app.UseMvcWithDefaultRoute();
