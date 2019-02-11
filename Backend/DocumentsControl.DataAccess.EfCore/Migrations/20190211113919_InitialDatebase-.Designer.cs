@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DocumentsControl.DataAccess.EfCore.Migrations
 {
-    [DbContext(typeof(AcademyDbContext))]
-    [Migration("20190210122404_InitialDatabase")]
-    partial class InitialDatabase
+    [DbContext(typeof(DocumentsControlDbContext))]
+    [Migration("20190211113919_InitialDatebase-")]
+    partial class InitialDatebase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

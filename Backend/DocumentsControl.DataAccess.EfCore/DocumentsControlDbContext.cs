@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Academy.DataAccess.EFCore
 {
-    public class AcademyDbContext : DbContext
+    public class DocumentsControlDbContext : DbContext
     {
         public DbSet<Node> Nodes { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

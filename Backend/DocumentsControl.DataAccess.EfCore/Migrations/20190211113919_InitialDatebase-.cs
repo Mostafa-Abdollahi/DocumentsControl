@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DocumentsControl.DataAccess.EfCore.Migrations
 {
-    public partial class InitialDatabase : Migration
+    public partial class InitialDatebase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
