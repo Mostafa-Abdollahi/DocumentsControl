@@ -1,8 +1,16 @@
 ﻿using System;
+using Academy.DataAccess.EFCore;
+using Autofac;
+using DocumentsControl.Application;
 
-namespace DocumnetControl.Config
+namespace DocumnetsControl.Config
 {
-    public class Class1
+    public class DocumentsControlModule : Module
     {
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<NodeService>().As<INodeService>().InstancePerLifetimeScope();
+            builder.RegisterType<DocumentsControlDbContext>().InstancePerLifetimeScope();
+        }
     }
 }

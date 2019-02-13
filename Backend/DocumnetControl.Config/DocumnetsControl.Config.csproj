@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DocumentsControl.Application\DocumentsControl.Application.csproj" />
     <ProjectReference Include="..\DocumentsControl.DataAccess.EfCore\DocumentsControl.DataAccess.EfCore.csproj" />
   </ItemGroup>
 
