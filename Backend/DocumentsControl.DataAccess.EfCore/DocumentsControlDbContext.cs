@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Academy.DataAccess.EFCore.Mapping;
+using DocumentsControl.DataAccess.EFCore.Mapping;
 using DocumentsControl.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace Academy.DataAccess.EFCore
+namespace DocumentsControl.DataAccess.EFCore
 {
     public class DocumentsControlDbContext : DbContext
     {

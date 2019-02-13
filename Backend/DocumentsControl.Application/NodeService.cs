@@ -1,10 +1,10 @@
-﻿using Academy.DataAccess.EFCore;
-using DocumentsControl.Domain;
+﻿using DocumentsControl.Domain;
 using Mapster;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DocumentsControl.DataAccess.EFCore;
 
 namespace DocumentsControl.Application
 {
@@ -34,11 +34,21 @@ namespace DocumentsControl.Application
         }
         public List<NodeDto> GetAll()
         {
-            //TODO: whole tree is loading, make it lazy
-            var entities = _dbContext.Nodes.ToList()
-                            .Where(a => a.ParentNodeId == null)
-                            .ToList();
-            return entities.Adapt<List<NodeDto>>();
+            try
+            {
+                //TODO: whole tree is loading, make it lazy
+                var entities = _dbContext.Nodes.ToList()
+                .Where(a => a.ParentNodeId == null)
+                .ToList();
+                var x = entities.Adapt<List<NodeDto>>();
+                return x;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+           
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
-using Academy.DataAccess.EFCore;
 using Autofac;
 using DocumentsControl.Application;
+using DocumentsControl.DataAccess.EFCore;
 
 namespace DocumnetsControl.Config
 {

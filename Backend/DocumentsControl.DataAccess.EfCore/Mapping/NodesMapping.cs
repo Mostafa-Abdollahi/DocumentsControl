@@ -5,7 +5,7 @@ using DocumentsControl.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Academy.DataAccess.EFCore.Mapping
+namespace DocumentsControl.DataAccess.EFCore.Mapping
 {
     public class NodesMapping : IEntityTypeConfiguration<Node>
     {
