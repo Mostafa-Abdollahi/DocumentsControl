@@ -12,7 +12,11 @@ namespace DocumentsControl.DataAccess.EFCore.Mapping
         public void Configure(EntityTypeBuilder<Node> builder)
         {
             builder.ToTable("Nodes");
-            builder.Property(a => a.Title).HasMaxLength(250).IsRequired();
+            builder.Property(a => a.Title).IsRequired();
+            builder.Property(a => a.DateCreated).IsRequired(false);
+            builder.Property(a => a.DateModified).IsRequired(false);
+            builder.Property(a => a.IsFile).HasDefaultValue(false);
+
             builder.HasOne(a => a.ParentNode)
                 .WithMany(a => a.Children)
                 .HasForeignKey(a => a.ParentNodeId);
