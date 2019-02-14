@@ -4,14 +4,16 @@ using DocumentsControl.DataAccess.EFCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DocumentsControl.DataAccess.EfCore.Migrations
 {
     [DbContext(typeof(DocumentsControlDbContext))]
-    partial class DocumentsControlDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190214100027_FullDatabase")]
+    partial class FullDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,18 +57,22 @@ namespace DocumentsControl.DataAccess.EfCore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long>("NodeId");
+                    b.Property<long>("Node_Id");
 
-                    b.Property<long>("TagId");
+                    b.Property<long>("Tag_Id");
 
                     b.Property<string>("Value")
                         .IsRequired();
 
+                    b.Property<long?>("nodeId");
+
+                    b.Property<long?>("tagId");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("NodeId");
+                    b.HasIndex("nodeId");
 
-                    b.HasIndex("TagId");
+                    b.HasIndex("tagId");
 
                     b.ToTable("NodeTags");
                 });
@@ -110,13 +116,11 @@ namespace DocumentsControl.DataAccess.EfCore.Migrations
                 {
                     b.HasOne("DocumentsControl.Domain.Node", "node")
                         .WithMany()
-                        .HasForeignKey("NodeId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("nodeId");
 
                     b.HasOne("DocumentsControl.Domain.Tag", "tag")
                         .WithMany()
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("tagId");
                 });
 #pragma warning restore 612, 618
         }

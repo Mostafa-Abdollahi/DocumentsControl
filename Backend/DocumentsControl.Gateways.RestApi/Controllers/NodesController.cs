@@ -22,10 +22,23 @@ namespace DocumentsControl.Gateways.RestApi.Controllers
         {
             return _service.GetAll();
         }
-        //[HttpPost]
-        //public void Create(CreateNodeDto dto)
-        //{
-        //    _service.Create(dto);
-        //}
+
+        [HttpPost]
+        public void Create(CreateNodeDto dto)
+        {
+            _service.Create(dto);
+        }
+
+        [HttpDelete]
+        public void Delete(long id)
+        {
+            _service.Delete(id);
+        }
+
+        [HttpPut]
+        public void Put(NodeDto dto)
+        {
+            _service.Update(dto);
+        }
     }
 }

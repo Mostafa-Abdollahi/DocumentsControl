@@ -10,6 +10,7 @@ namespace DocumnetsControl.Config
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<NodeService>().As<INodeService>().InstancePerLifetimeScope();
+            builder.RegisterType<SettingService>().As<ISettingService>().InstancePerLifetimeScope();
             builder.RegisterType<DocumentsControlDbContext>().InstancePerLifetimeScope();
         }
     }

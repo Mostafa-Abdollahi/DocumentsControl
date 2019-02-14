@@ -8,6 +8,7 @@ namespace DocumentsControl.Application
     public class NodeDto
     {
         public long Id { get; set; }
+        public long ParentNodeId { get; set; }
         public string Title { get; set; }
         public string Version { get; set; }
         public string Path { get; set; }

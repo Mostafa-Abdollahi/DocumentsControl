@@ -12,8 +12,8 @@ namespace DocumentsControl.Application
         public string Path { get; set; }
         public long? ParentNodeId { get; set; }
         public List<Node> Children { get; set; }
-        public DateTime DateCreated { get; set; }
-        public DateTime DateModified { get; set; }
+        public DateTime? DateCreated { get; set; }
+        public DateTime? DateModified { get; set; }
         public bool IsFile { get; set; }
     }
 }
